@@ -1,0 +1,44 @@
+.pHeader{
+
+    background: var(--dark-color);
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .socialMedia,
+        .contact{
+            a{
+                color: var(--white-color);
+                text-decoration: none;
+                margin-left: 10px;
+                transition: all ease 0.3s;
+                font-size: 18px;
+            }
+
+            & a:hover{
+                color: #38b6ff ;
+            }
+
+        }
+
+        .contact{
+            display: flex;
+
+            a{
+                display: flex;
+                align-items: center;
+                margin-left: 25px;
+            }
+
+            span{
+                margin-left: 10px;
+            }
+        }
+
+    }
+}
