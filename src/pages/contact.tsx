@@ -1,10 +1,9 @@
 import { Layout } from '@/Layouts';
-import { Button } from '@/components/Button';
-import { TypeWelcome } from '@/components/Typing-Welcome';
+import { Container } from '@/components/Container';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 
-export default function Home() {
+export default function Contact() {
   const router = useRouter();
 
   return (
@@ -23,8 +22,9 @@ export default function Home() {
             }}
             className="base-page-size"
           >
-            <TypeWelcome />
-            <Button clName={''} redirect={'/about'} content={'Sobre mim'} />
+            <Container>
+              <h1 style={{ color: '#fff' }}>Contato</h1>
+            </Container>
           </motion.div>
         </AnimatePresence>
       </Layout>

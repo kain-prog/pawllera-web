@@ -1,10 +1,17 @@
 import { Layout } from '@/Layouts';
-import { Button } from '@/components/Button';
-import { TypeWelcome } from '@/components/Typing-Welcome';
+import { Container } from '@/components/Container';
+import { ProjectData } from '@/components/ProjectData';
+import { getAllPosts } from '@/data/posts/get-all-posts';
+import { IPost } from '@/interfaces/posts';
+import { GetStaticProps } from 'next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 
-export default function Home() {
+export interface IProjectsProps {
+  posts: IPost[];
+}
+
+export default function Projects({ posts }: IProjectsProps) {
   const router = useRouter();
 
   return (
@@ -23,11 +30,20 @@ export default function Home() {
             }}
             className="base-page-size"
           >
-            <TypeWelcome />
-            <Button clName={''} redirect={'/about'} content={'Sobre mim'} />
+            <Container>
+              <ProjectData posts={posts} />
+            </Container>
           </motion.div>
         </AnimatePresence>
       </Layout>
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = await getAllPosts();
+
+  return {
+    props: { posts },
+  };
+};

@@ -1,10 +1,9 @@
 import { Layout } from '@/Layouts';
-import { Button } from '@/components/Button';
-import { TypeWelcome } from '@/components/Typing-Welcome';
+import { CardImage } from '@/components/CardImage';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 
-export default function Home() {
+export default function About() {
   const router = useRouter();
 
   return (
@@ -23,8 +22,7 @@ export default function Home() {
             }}
             className="base-page-size"
           >
-            <TypeWelcome />
-            <Button clName={''} redirect={'/about'} content={'Sobre mim'} />
+            <CardImage />
           </motion.div>
         </AnimatePresence>
       </Layout>
