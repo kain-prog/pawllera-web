@@ -1,0 +1,30 @@
+.container{
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: 20px auto;
+
+    display: flex;
+    justify-content: end;
+}
+
+.btnPrimary{
+    text-decoration: none;
+    background: var(--main-color);
+    color: #ffff;
+    font-family: 'Black Ops One';
+    border-radius: 15px;
+    padding: 10px 25px;
+    font-size: 1.6em;
+    transition: all ease 0.3s;
+    border: 1px solid var(--main-color);
+
+    &:hover{
+        background: none;
+        color: var(--main-color);
+    }
+
+    svg{
+        margin-left: 10px;
+        width: 18px;
+    }
+}
