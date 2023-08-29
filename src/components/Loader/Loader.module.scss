@@ -1,0 +1,29 @@
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--dark-color);
+    perspective: 195px;
+
+    img{
+      max-width: 165px;
+      height: auto;
+
+      transform-origin: center;
+      animation: rotateImage 4s linear infinite;
+      transform-style: preserve-3d;
+  }
+
+  @keyframes rotateImage {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+}
+    
+  
