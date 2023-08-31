@@ -17,6 +17,10 @@
     font-size: 1.6em;
     transition: all ease 0.3s;
     border: 1px solid var(--main-color);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover{
         background: none;
