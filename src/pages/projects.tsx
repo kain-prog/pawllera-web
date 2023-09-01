@@ -1,17 +1,21 @@
 import { Layout } from '@/Layouts';
-import { Container } from '@/components/Container';
 import { ProjectData } from '@/components/ProjectData';
 import { getAllPosts } from '@/data/posts/get-all-posts';
-import { IPost } from '@/interfaces/posts';
+import { ICategoryInfo, IPost } from '@/interfaces/posts';
 import { GetStaticProps } from 'next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
+import { CategoryPosts } from '@/components/CategoryPosts';
+import { getAllCategories } from '@/data/categories/get-all-categories';
+import { useFilteredPosts } from '@/hooks/handle-filter';
 
 export interface IProjectsProps {
   posts: IPost[];
+  categories: ICategoryInfo[];
 }
 
-export default function Projects({ posts }: IProjectsProps) {
+export default function Projects({ posts, categories }: IProjectsProps) {
+  const { filteredPosts, handleFilter } = useFilteredPosts();
   const router = useRouter();
 
   return (
@@ -29,10 +33,15 @@ export default function Projects({ posts }: IProjectsProps) {
               animateState: { opacity: 1, scale: 1 },
             }}
             className="base-page-size"
+            style={{ width: '100%' }}
           >
-            <Container>
-              <ProjectData posts={posts} />
-            </Container>
+            <CategoryPosts
+              categories={categories}
+              handleFilter={handleFilter}
+            />
+            <ProjectData
+              posts={filteredPosts.length > 0 ? filteredPosts : posts}
+            />
           </motion.div>
         </AnimatePresence>
       </Layout>
@@ -42,8 +51,9 @@ export default function Projects({ posts }: IProjectsProps) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = await getAllPosts();
+  const categories = await getAllCategories();
 
   return {
-    props: { posts },
+    props: { posts, categories },
   };
 };
