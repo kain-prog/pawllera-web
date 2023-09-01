@@ -1,5 +1,7 @@
 import { Layout } from '@/Layouts';
+import { ContactMe } from '@/components/Contact-me';
 import { Container } from '@/components/Container';
+import { Form } from '@/components/Form';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 
@@ -22,8 +24,10 @@ export default function Contact() {
             }}
             className="base-page-size"
           >
-            <Container>
-              <h1 style={{ color: '#fff' }}>Contato</h1>
+            <h1 style={{ color: '#fff', textAlign: 'center' }}>Contato</h1>
+            <Container styleProps={{ display: 'flex' }}>
+              <ContactMe />
+              <Form />
             </Container>
           </motion.div>
         </AnimatePresence>
