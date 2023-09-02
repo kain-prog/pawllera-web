@@ -1,7 +1,9 @@
 import style from './CardImage.module.scss';
 import pawllera from '../../../public/profile-pawllera.jpeg';
+import psdIcon from '../../../public/psd-icon.png';
 import Image from 'next/image';
 import { Button } from '../Button';
+import { faImages } from '@fortawesome/free-solid-svg-icons';
 
 export const CardImage = () => {
   return (
@@ -22,10 +24,17 @@ export const CardImage = () => {
         </p>
         <p>Lorem ipsum dolor sit amet.</p>
 
+        <Image
+          src={psdIcon}
+          alt={'Ícone Photoshop'}
+          className={style.services}
+        />
+
         <Button
           redirect="/projects"
           clName={style.btnAbout}
           content="Meus Projetos"
+          iconFA={faImages}
         />
       </div>
     </div>

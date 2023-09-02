@@ -1,0 +1,13 @@
+.content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    flex: 1 0;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+
+    @media(max-width: 767px){
+        padding: 5px;
+    }
+}

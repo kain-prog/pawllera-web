@@ -11,5 +11,9 @@
 .typeWelcome{
     color: #ffff;
     text-shadow: 0 0 10px var(--main-color);
+    text-align: center;
+    font-size: 4em;
+
+    @media(max-width: 767px){ font-size: 3em; }
 
 }
