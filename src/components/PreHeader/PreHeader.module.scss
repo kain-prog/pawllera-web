@@ -2,6 +2,8 @@
 
     background: var(--dark-color);
 
+    @media(max-width: 767px){ display: none; }
+
     .container{
         display: flex;
         align-items: center;
