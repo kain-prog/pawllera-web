@@ -6,6 +6,9 @@
     margin: 65px 0px 40px;
     width: 100%;
 
+
+    @media(max-width: 767px){ justify-content: center; }
+
     &::after{
         content: "Categorias";
         display: block;
@@ -17,6 +20,8 @@
         top: -31px;
         right: 0px;
         font-family: 'Black Ops one';
+
+        @media(max-width: 767px){ right: 50%; transform: translate(50%); }
         
     }
 
@@ -27,6 +32,8 @@
         margin-left: 20px;
         position: relative;
 
+        @media(max-width: 767px){ font-size: 15px; margin-left: 12px; }
+
         &:not(:last-child)::after{
             content: '';
             width: 5px;
@@ -36,7 +43,8 @@
             position: absolute;
             right: -13px;
             top: 50%;
-            transform: rotate(0, -50%);
+
+            @media(max-width: 767px){ width: 3px; right: -8px; }
 
         }
         
@@ -67,6 +75,8 @@
         left: 0px;
         top: 50%;
         transform: translate(0, -50%);
+
+        @media(max-width: 767px){ width: 50px; }
     }
 
     &::after{
@@ -81,6 +91,8 @@
         right: 0px;
         top: 50%;
         transform: translate(0, -50%);
+
+        @media(max-width: 767px){ width: 50px; }
     }
 }
 
