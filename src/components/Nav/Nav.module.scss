@@ -1,0 +1,41 @@
+.nav{
+
+    nav{
+        ul{
+            display: flex;
+            list-style: none;
+
+            li{
+                margin-left: 25px;
+                text-decoration: none;
+
+                &::first-letter{
+                    color: var(--main-color);
+                }
+
+                a{text-decoration: none;}
+
+                p{
+                    color: var(--white-color);
+                    text-decoration: none;
+                    font-family: 'Black Ops One';
+                    font-size: 20px;
+                    transition: all ease 0.3s;
+
+                    &:hover{
+                        color: var(--main-color) ;
+                    }
+
+                }
+
+                .active{
+                    color: var(--main-color);
+                }
+
+                
+
+                
+            }
+        }
+    }
+}
