@@ -22,6 +22,8 @@
     align-items: center;
     justify-content: center;
 
+    @media(max-width: 767px){ font-size: 1.3em; }
+
     &:hover{
         background: none;
         color: var(--main-color);
