@@ -12,17 +12,22 @@ export const CardImage = () => {
         <Image src={pawllera} alt="Pawllera" />
       </div>
       <div className={style.desc}>
-        <h1>Meu nome é Paullo e eu sou ....</h1>
+        <h1>Me chamo Paulo Gabriel</h1>
+        <h2> - 25 anos, moro em São Gonçalo - Rio de Janeiro.</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium,
-          sequi vero iure quidem iusto accusamus.
+          Comecei a fazer artes pois desde criança costumava sempre admirar
+          fotos &quot;bem tiradas&quot;, complexas e mais trabalhadas, assim
+          como montagens e tratamentos de imagens. Resolvi me aprofundar e ir em
+          busca de conhecimento para aprender um pouco mais, e acabou que virou
+          meu hobbie preferido criar imagens para jogadores de futebol e
+          músicos.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus
-          aliquam nihil nemo saepe, molestiae perferendis est laudantium
-          recusandae eveniet qui?
+          Desde pequeno sou apaixonado por futebol, usufruo da filosofia de ser
+          &quot;buscar ser o melhor&quot; em tudo que eu faço, levando comigo e
+          tendo como inspiração um ícone futebolístico. Torcedor do Fluminense -
+          RJ. Disciplina e persuasão são as palavras que me definem.
         </p>
-        <p>Lorem ipsum dolor sit amet.</p>
 
         <Image
           src={psdIcon}
