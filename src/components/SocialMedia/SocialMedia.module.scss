@@ -1,0 +1,13 @@
+.socialMedia{
+    a{
+        color: var(--white-color);
+        text-decoration: none;
+        margin-left: 10px;
+        transition: all ease 0.3s;
+        font-size: 18px;
+    }
+
+    & a:hover{
+        color: #38b6ff ;
+    }
+}
