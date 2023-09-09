@@ -1,0 +1,47 @@
+.containerForm{
+    width: 50%;
+    max-width: 500px;
+    margin: auto;
+    padding: 30px 15px;
+
+    @media(max-width: 991px){ width: 100%; }
+
+    .formField{
+        width: 100%;
+        margin-bottom: 20px;
+
+        label{
+            color: #fff;
+        }
+
+        input, textarea{
+            margin-top: 3px;
+            width: 100%;
+            padding: 10px;
+            box-shadow: 0px 0px 5px var(--main-color);
+            border: none;
+            border-radius: 3px;
+
+            &:focus{
+                outline-color: var(--main-color);
+                outline-style: solid;
+                box-shadow: 0 0 10px var(--main-color);
+            }
+        }
+
+        textarea{
+            height: 100px;
+        }
+    }
+}
+
+.fs18 {
+
+    padding: 0;
+
+    a{
+        width: 100%;
+        font-size: 18px;
+        border-radius: 5px;
+    }
+} 
