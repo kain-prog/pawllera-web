@@ -23,9 +23,18 @@ export default function Contact() {
               animateState: { opacity: 1, scale: 1 },
             }}
             className="base-page-size"
+            style={{ width: '100%' }}
           >
-            <h1 style={{ color: '#fff', textAlign: 'center' }}>Contato</h1>
-            <Container styleProps={{ display: 'flex' }}>
+            <h1
+              style={{
+                color: '#fff',
+                textAlign: 'center',
+                textShadow: '0px 0px 5px var(--main-color)',
+              }}
+            >
+              Contato
+            </h1>
+            <Container styleProps={{ display: 'flex', marginTop: '40px' }}>
               <ContactMe />
               <Form />
             </Container>
