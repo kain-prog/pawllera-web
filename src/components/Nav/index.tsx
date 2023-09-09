@@ -15,17 +15,6 @@ export const Nav = (props: styleProps) => {
         <nav>
           <ul>
             <li>
-              <Link href="/about">
-                <p
-                  className={
-                    router.pathname === '/about' ? `${style.active}` : ''
-                  }
-                >
-                  Sobre
-                </p>
-              </Link>
-            </li>
-            <li>
               <Link href="/projects">
                 <p
                   className={
@@ -33,6 +22,17 @@ export const Nav = (props: styleProps) => {
                   }
                 >
                   Meus Projetos
+                </p>
+              </Link>
+            </li>
+            <li>
+              <Link href="/about">
+                <p
+                  className={
+                    router.pathname === '/about' ? `${style.active}` : ''
+                  }
+                >
+                  Sobre
                 </p>
               </Link>
             </li>
