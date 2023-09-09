@@ -33,7 +33,7 @@ export default function Projects({ posts, categories }: IProjectsProps) {
               animateState: { opacity: 1, scale: 1 },
             }}
             className="base-page-size"
-            style={{ width: '100%' }}
+            style={{ width: '100%', padding: '10px' }}
           >
             <CategoryPosts
               categories={categories}
