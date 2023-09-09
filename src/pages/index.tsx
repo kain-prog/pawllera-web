@@ -1,6 +1,7 @@
 import { Layout } from '@/Layouts';
 import { Button } from '@/components/Button';
 import { TypeWelcome } from '@/components/Typing-Welcome';
+import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 
@@ -24,7 +25,12 @@ export default function Home() {
             className="base-page-size"
           >
             <TypeWelcome />
-            <Button clName={''} redirect={'/about'} content={'Sobre mim'} />
+            <Button
+              clName={''}
+              redirect={'/about'}
+              content={'Sobre mim'}
+              iconFA={faArrowAltCircleRight}
+            />
           </motion.div>
         </AnimatePresence>
       </Layout>
