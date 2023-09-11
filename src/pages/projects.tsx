@@ -1,7 +1,6 @@
 import { Layout } from '@/Layouts';
 import { ProjectData } from '@/components/ProjectData';
-import { getAllPosts } from '@/data/posts/get-all-posts';
-import { ICategoryInfo, IPost } from '@/interfaces/posts';
+import { ICategoryInfo } from '@/interfaces/posts';
 import { GetStaticProps } from 'next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
@@ -10,11 +9,10 @@ import { getAllCategories } from '@/data/categories/get-all-categories';
 import { useFilteredPosts } from '@/hooks/handle-filter';
 
 export interface IProjectsProps {
-  posts: IPost[];
   categories: ICategoryInfo[];
 }
 
-export default function Projects({ posts, categories }: IProjectsProps) {
+export default function Projects({ categories }: IProjectsProps) {
   const { filteredPosts, handleFilter } = useFilteredPosts();
   const router = useRouter();
 
@@ -39,9 +37,7 @@ export default function Projects({ posts, categories }: IProjectsProps) {
               categories={categories}
               handleFilter={handleFilter}
             />
-            <ProjectData
-              posts={filteredPosts.length > 0 ? filteredPosts : posts}
-            />
+            <ProjectData posts={filteredPosts} />
           </motion.div>
         </AnimatePresence>
       </Layout>
@@ -50,10 +46,9 @@ export default function Projects({ posts, categories }: IProjectsProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getAllPosts();
   const categories = await getAllCategories();
 
   return {
-    props: { posts, categories },
+    props: { categories },
   };
 };

@@ -14,7 +14,5 @@ export const getAllImages = (posts: IPost[]): IImage[] => {
     });
   }
 
-  console.log(newArray);
-
   return newArray;
 };
