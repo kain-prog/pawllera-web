@@ -17,26 +17,32 @@ export const ProjectData = ({ posts }: IProjects) => {
   return (
     <>
       <div className={style.containerPost}>
-        {posts.map((post, index) => (
-          <div key={post.id} className={style.postBox}>
-            <div
-              className={style.clickContainer}
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(index);
-              }}
-            >
-              <img
-                src={`${SITE_URL}${post.attributes.thumb.data.attributes.formats.large.url}`}
-                alt={post.attributes.title}
-              />
+        {posts.length > 0 ? (
+          posts.map((post, index) => (
+            <div key={post.id} className={style.postBox}>
+              <div
+                className={style.clickContainer}
+                onClick={() => {
+                  setOpen(true);
+                  setSelectedImageIndex(index);
+                }}
+              >
+                <img
+                  src={`${SITE_URL}${post.attributes.thumb.data.attributes.formats.large.url}`}
+                  alt={post.attributes.title}
+                />
 
-              <div className={style.descPost}>
-                <h2>{post.attributes.title}</h2>
+                <div className={style.descPost}>
+                  <h2>{post.attributes.title}</h2>
+                </div>
               </div>
             </div>
+          ))
+        ) : (
+          <div className={style.notFound}>
+            <h2>Nenhuma arte encontrada...</h2>
           </div>
-        ))}
+        )}
         <Lightbox
           open={open}
           close={() => setOpen(false)}
