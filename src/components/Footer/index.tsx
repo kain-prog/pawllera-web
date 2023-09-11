@@ -5,7 +5,7 @@ export const Footer = () => {
     <div className={style.footer}>
       <p>&copy; - Todos os Direitos Reservados | 2023 - </p>
       <span>
-        feito por: <a href="https://digitallabor.com.br"> Kain Dev </a>
+        <a href="https://digitallabor.com.br"> Kain Dev </a>
       </span>
     </div>
   );
