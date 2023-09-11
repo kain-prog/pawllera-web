@@ -36,6 +36,7 @@ export const CardImage = () => {
         />
 
         <Button
+          click={() => {}}
           redirect="/projects"
           clName={style.btnAbout}
           content="Meus Projetos"

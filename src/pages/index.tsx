@@ -26,6 +26,7 @@ export default function Home() {
           >
             <TypeWelcome />
             <Button
+              click={() => {}}
               clName={''}
               redirect={'/about'}
               content={'Sobre mim'}

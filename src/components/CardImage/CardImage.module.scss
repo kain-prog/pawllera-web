@@ -78,6 +78,10 @@
             padding: 0;
             justify-content: start;
 
+            a{
+                height: 55px;
+            }
+
             @media(max-width: 767px){ 
                 justify-content: center;
 
