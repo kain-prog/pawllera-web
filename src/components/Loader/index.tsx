@@ -5,7 +5,9 @@ import style from './Loader.module.scss';
 export const Loader = () => {
   return (
     <div className={style.loader}>
-      <Image src={logo} alt="logo-pawllera loader"></Image>
+      <div className={style.containerLoader}>
+        <Image src={logo} alt="logo-pawllera loader"></Image>
+      </div>
     </div>
   );
 };
