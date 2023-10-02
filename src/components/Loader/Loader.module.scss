@@ -1,25 +1,23 @@
 
 .loader {
    
+  height: 100vh !important;
+  width: 100vw !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background: var(--dark-color);
+
   .containerLoader{
 
-    width: 100vw !important;
-    height: 100vh !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--dark-color);
     perspective: 195px;
 
     img{
-      width: 100vw !important;
-      height: 100vh !important;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       background: var(--dark-color);
       max-width: 165px;
       height: auto;
+      margin: auto;
 
       transform-origin: center;
       animation: rotateImage 4s linear infinite;
