@@ -2,7 +2,6 @@ import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import style from './Projects.module.scss';
 import { IPost } from '@/interfaces/posts';
-import { SITE_URL } from '@/config/app-config';
 import { useState } from 'react';
 import { getAllImages } from '@/utils/all-images';
 
@@ -28,12 +27,12 @@ export const ProjectData = ({ posts }: IProjects) => {
                 }}
               >
                 <img
-                  src={`${SITE_URL}${post.attributes.thumb.data.attributes.formats.large.url}`}
-                  alt={post.attributes.title}
+                  src={`${post.attributes.imagem.data.attributes.formats.medium.url}`}
+                  alt={post.attributes.titulo}
                 />
 
                 <div className={style.descPost}>
-                  <h2>{post.attributes.title}</h2>
+                  <h2>{post.attributes.titulo}</h2>
                 </div>
               </div>
             </div>

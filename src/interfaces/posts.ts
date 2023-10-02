@@ -4,10 +4,10 @@ export interface IPost {
 }
 
 export interface IThumbFormat {
-  large: IThumbLarge;
+  medium: IThumbMedium;
 }
 
-export interface IThumbLarge {
+export interface IThumbMedium {
   url: string;
   name: string;
   hash: string;
@@ -18,7 +18,7 @@ export interface IThumbLarge {
 
 export interface IAuthor {
   id: number;
-  name: string;
+  Nome: string;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
@@ -26,7 +26,7 @@ export interface IAuthor {
 
 export interface ICategory {
   id: number;
-  name: string;
+  Nome: string;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
@@ -55,12 +55,11 @@ export interface IAttThumb {
 }
 
 export interface IAttPost {
-  title: string;
-  slug: string;
+  titulo: string;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
   author: IAuthor;
-  category: IDataCategory;
-  thumb: IThumbData;
+  categoria: IDataCategory;
+  imagem: IThumbData;
 }

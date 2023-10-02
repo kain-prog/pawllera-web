@@ -13,18 +13,49 @@ export const Form = () => {
   const [type, setType] = useState<string>('');
   const [btnDisabled, setBtnDisabled] = useState<string>('');
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
     setBtnDisabled(style.btnDisabled);
 
+    const data = {
+      name,
+      email,
+      subject,
+      message,
+    };
+
+    const options = {
+      method: 'POST',
+      body: JSON.stringify(data),
+    };
+
+    const send = await fetch(`http://localhost:3000/api/contact`, options).then(
+      (res) =>
+        res.json().then((result) => {
+          if (res.status === 200) {
+            setBtnDisabled('');
+            setVisibility(true);
+            setType(style.messageSuccess);
+            setMsg(result.message);
+            setTimeout(() => {
+              setVisibility(false);
+            }, 3000);
+          } else {
+            setBtnDisabled('');
+            setVisibility(true);
+            setType(style.messageError);
+            setMsg(result.message);
+            setTimeout(() => {
+              setVisibility(false);
+            }, 3000);
+          }
+        }),
+    );
+
     setBtnDisabled('');
-    setVisibility(true);
-    setType(style.messageSuccess);
-    setMsg('');
-    setTimeout(() => {
-      setVisibility(false);
-    }, 3000);
+
+    return send;
   };
 
   return (

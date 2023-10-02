@@ -11,7 +11,7 @@ export const getAllPosts = async (query?: string | void): Promise<IPost[]> => {
 
   if (query) {
     const postFiltered = posts.data.filter(
-      (post) => post.attributes.category.data.attributes.name === query,
+      (post) => post.attributes.categoria.data.attributes.Nome === query,
     );
 
     return postFiltered;

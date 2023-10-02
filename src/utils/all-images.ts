@@ -1,4 +1,3 @@
-import { SITE_URL } from '@/config/app-config';
 import { IPost } from '@/interfaces/posts';
 
 interface IImage {
@@ -10,7 +9,7 @@ export const getAllImages = (posts: IPost[]): IImage[] => {
 
   for (const post of posts) {
     newArray.push({
-      src: `${SITE_URL}${post.attributes.thumb.data.attributes.formats.large.url}`,
+      src: `${post.attributes.imagem.data.attributes.formats.medium.url}`,
     });
   }
 

@@ -18,11 +18,11 @@ export const CategoryPosts = ({ categories, handleFilter }: ICategoryProps) => {
             className={style.filter}
             key={category.id}
             onClick={() => {
-              handleFilter(`${category.attributes.name}`);
-              setCategory(category.attributes.name);
+              handleFilter(`${category.attributes.Nome}`);
+              setCategory(category.attributes.Nome);
             }}
           >
-            {category.attributes.name}
+            {category.attributes.Nome}
           </li>
         ))}
       </ul>
