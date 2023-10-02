@@ -2,7 +2,7 @@
 .loader {
    
   .containerLoader{
-    
+
     width: 100vw !important;
     height: 100vh !important;
     display: flex;
@@ -12,6 +12,12 @@
     perspective: 195px;
 
     img{
+      width: 100vw !important;
+      height: 100vh !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--dark-color);
       max-width: 165px;
       height: auto;
 
