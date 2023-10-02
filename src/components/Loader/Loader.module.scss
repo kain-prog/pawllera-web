@@ -1,14 +1,14 @@
 
 .loader {
-  width: 100vw !important;
-  height: 100vh !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--dark-color);
-  
+   
   .containerLoader{
-
+    
+    width: 100vw !important;
+    height: 100vh !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--dark-color);
     perspective: 195px;
 
     img{
