@@ -6,7 +6,7 @@ export const TypeWelcome = () => {
     <>
       <div className={style.container}>
         <TypeAnimation
-          sequence={['Seja muito Bem-vindo!', 1000]}
+          sequence={['Seja muito bem-vindo!', 1000]}
           wrapper="span"
           speed={20}
           style={{ display: 'inline-block' }}
