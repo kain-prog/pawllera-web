@@ -11,6 +11,8 @@
 
   .containerLoader{
 
+    display: flex !important;
+    height: 100vh !important;
     perspective: 195px;
 
     img{
